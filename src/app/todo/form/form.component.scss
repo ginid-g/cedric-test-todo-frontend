@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    gap: 15px;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1.5px solid #ddd;
+            outline: none;
+        }
+
+        small {
+            color: red;
+        }
+    }
+
+
+
+    button {
+        padding: 10px 42px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background: #28a745;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        margin: auto 0;
+    }
+
+}

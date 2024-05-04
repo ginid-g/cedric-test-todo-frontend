@@ -1,0 +1,10 @@
+<div class="task-item">
+    <h2 [class.strike]="task.isCompleted">{{task.name}}</h2>
+    <p>Dead line: <strong> {{task.deadLine | date:"dd/MM/YYYY hh:mm a"}}</strong> </p>
+    <small>created at: {{task.createdAt | date:"dd/MM/YYYY hh:mm a"}}</small>
+    <div class="actions">
+        <button class="status-btn" [class.pending]="!task.isCompleted" [class.completed]="task.isCompleted"
+            (click)="updateStatus()">{{task.isCompleted?"Undo":"Complete Task"}}</button>
+        <button class="delete-btn" (click)="deleteTask()">Delete</button>
+    </div>
+</div>

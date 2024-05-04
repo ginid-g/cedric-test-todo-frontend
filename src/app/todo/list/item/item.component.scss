@@ -1,0 +1,52 @@
+.task-item {
+    background: white;
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px auto;
+    box-shadow: 0 0 15px 8px #c5c0c030;
+
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .strike {
+        text-decoration: line-through;
+    }
+
+
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 20px;
+
+        .delete-btn {
+            background: #dc3545;
+        }
+
+        .status-btn,
+        .delete-btn {
+            padding: 10px 42px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            margin: auto 0;
+            display: block;
+        }
+
+        .pending {
+            background-color: #28a745;
+        }
+
+        .completed {
+            color: black;
+        }
+
+    }
+
+}

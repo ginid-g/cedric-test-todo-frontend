@@ -1,0 +1,17 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Task Name</label>
+        <input type="text" id="name" formControlName="name">
+        <div *ngIf="taskForm.get('name')?.errors && taskForm.get('name')?.touched">
+            <small *ngIf="taskForm.get('name')?.errors?.['required']">Name is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="deadLine">Dead Line</label>
+        <input type="datetime-local" id="deadLine" formControlName="deadLine">
+        <div *ngIf="taskForm.get('deadLine')?.errors && taskForm.get('deadLine')?.touched">
+            <small *ngIf="taskForm.get('deadLine')?.errors?.['required']">deadLine is required</small>
+        </div>
+    </div>
+    <button type="submit" [disabled]="!taskForm.valid || isLoading">Submit</button>
+</form>
